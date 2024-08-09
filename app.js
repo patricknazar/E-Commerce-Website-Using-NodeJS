@@ -15,8 +15,7 @@ const authRoutes = require('./routes/auth/auth');
 const cartRoutes = require('./routes/cart/cart');
 
 
-
-mongoose.connect('mongodb://localhost:27017/shopping-cart', 
+mongoose.connect('mongodb://db:27017/shopping-cart', 
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
