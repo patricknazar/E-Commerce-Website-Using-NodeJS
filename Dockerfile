@@ -7,9 +7,12 @@ RUN mkdir -p /usr/src/app
 # Change to that directory
 WORKDIR /usr/src/app
 
-# Intelligently build
+# Copy package.json and install dependencies first, as it
+# is an expensive operation
 COPY package.json /usr/src/app
 RUN npm install
+
+# Copy the app itself
 COPY . /usr/src/app
 
 # Export the app's port 3000
